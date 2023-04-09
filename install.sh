@@ -28,4 +28,15 @@ do
   fi
 done
 
+# **fonts**
+echo "Do you want to install nerd fonts? (y/n): "
+read answer
+if [[ "$answer" == "y" || "$answer" == "Y" ]]; then
+  brew tap homebrew/cask-fonts
+  brew install --cask font-sauce-code-pro-nerd-font
+  brew install --cask font-hack-nerd-font
+else
+  echo "Skipping installation of fonts"
+fi
+
 echo "Installation complete!"
