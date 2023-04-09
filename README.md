@@ -1,15 +1,23 @@
-# Machfiles
+//# rdorin dotfiles, borrowed from https://github.com/ChristianChiarulli/Machfiles
+# dotfiles
 
 ![machfiles image](./machfiles.png)
+
+## Setup
+
+You should have `git` and `homebrew` installed. If you want to install my programs, you can do that by executing the `install.sh` after cloning the repository.
+```bash
+~/dotfiles/install.sh
+```
 
 ## Installing
 
 You will need `git` and GNU `stow`
 
-Clone into your `$HOME` directory or `~`
+Clone into your `$HOME` directory
 
 ```bash
-git clone https://github.com/ChristianChiarulli/Machfiles.git ~
+git clone git@github.com:rdorin/dotfiles.git ~/dotfiles
 ```
 
 Run `stow` to symlink everything or just select what you want
@@ -21,7 +29,3 @@ stow */ # Everything (the '/' ignores the README)
 ```bash
 stow zsh # Just my zsh config
 ```
-
-## Programs
-
-An updated list of all the programs I use can be found in the `programs` directory
