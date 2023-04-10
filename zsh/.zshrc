@@ -1,4 +1,3 @@
-echo $DOTFILES
 export ZSH=$DOTFILES/zsh
 
 if [[ -d $DOTFILES/zsh/functions ]]; then
@@ -162,9 +161,7 @@ fi
 
 # look for all .zsh files and source them
 config_files=($DOTFILES/zsh/*.zsh)
-echo $config_files
 for file in $config_files[@]; do
-  echo "$file"
   source "$file"
 done
 
@@ -172,3 +169,5 @@ done
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 # If a ~/.localrc zshrc exists, source it
 [[ -a ~/.localrc ]] && source ~/.localrc
+
+eval "$(starship init zsh)"
