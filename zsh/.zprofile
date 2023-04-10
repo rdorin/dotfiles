@@ -1,31 +1,14 @@
-#!/bin/sh
-[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
+# .zprofile is sourced on login shells and before .zshrc. As a general rule, it should not change the
+# shell environment at all.
 
-
-# history
-HISTFILE=~/.zsh_history
-
-# source
-plug "$HOME/.config/zsh/aliases.zsh"
-plug "$HOME/.config/zsh/exports.zsh"
-
-# plugins
-plug "esc/conda-zsh-completion"
-plug "zsh-users/zsh-autosuggestions"
-plug "hlissner/zsh-autopair"
-plug "zap-zsh/supercharge"
-plug "zap-zsh/vim"
-plug "zap-zsh/zap-prompt"
-plug "zap-zsh/fzf"
-plug "zap-zsh/exa"
-plug "zsh-users/zsh-syntax-highlighting"
-
-# keybinds
-bindkey '^ ' autosuggest-accept
-
-export PATH="$HOME/.local/bin":$PATH
-
-if command -v bat &> /dev/null; then
-  alias cat="bat -pp --theme \"Visual Studio Dark+\"" 
-  alias catt="bat --theme \"Visual Studio Dark+\"" 
+if [[ -f /opt/homebrew/bin/brew ]]; then
+    # Homebrew exists at /opt/homebrew for arm64 macos
+    eval $(/opt/homebrew/bin/brew shellenv)
+elif [[ -f /usr/local/bin/brew ]]; then
+    # or at /usr/local for intel macos
+    eval $(/usr/local/bin/brew shellenv)
+elif [[ -d /home/linuxbrew/.linuxbrew ]]; then
+    # or from linuxbrew
+    test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+    test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
