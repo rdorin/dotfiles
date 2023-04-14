@@ -3,5 +3,5 @@ if [[ $# > 0 ]]; then
     git $@
 else
     # otherwise, run git status
-    git s
+    git status
 fi
