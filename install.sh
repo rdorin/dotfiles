@@ -12,6 +12,7 @@ PROGRAMS=(
   nvim
   zoxide
   exa
+  fzf
 )
 
 # Loop through the list of programs and prompt the user for confirmation before installing each one
