@@ -1,5 +1,6 @@
 export ZSH=$DOTFILES/zsh
 
+# add all functions
 if [[ -d $DOTFILES/zsh/functions ]]; then
     for func in $DOTFILES/zsh/functions/*(:t); autoload -U $func
 fi
@@ -9,6 +10,7 @@ fi
 ########################################################
 
 # initialize autocomplete
+# unless WARP
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
   autoload -U compinit add-zsh-hook
   compinit
@@ -18,14 +20,6 @@ prepend_path /usr/local/opt/grep/libexec/gnubin
 prepend_path /usr/local/sbin
 prepend_path $DOTFILES/bin
 prepend_path $HOME/bin
-
-# define the code directory
-# This is where my code exists and where I want the `c` autocomplete to work from exclusively
-if [[ -d ~/code ]]; then
-    export CODE_DIR=~/code
-elif [[ -d ~/Developer ]]; then
-    export CODE_DIR=~/Developer
-fi
 
 # display how long all tasks over 10 seconds take
 export REPORTTIME=10
@@ -47,8 +41,9 @@ setopt HIST_REDUCE_BLANKS        # remove superfluous blanks before recording en
 setopt SHARE_HISTORY             # share history between all sessions.
 setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
 
-#setopt COMPLETE_ALIASES
+setopt COMPLETE_ALIASES
 
+# bind keys unless warp
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
   # make terminal command navigation sane again
   bindkey "^[[1;5C" forward-word                      # [Ctrl-right] - forward one word
