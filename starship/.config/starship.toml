@@ -1,18 +1,22 @@
 format = """\
 [](fg:#00B7EB)\
 [ ](bg:#00B7EB fg:#551A8B)\
-$username\
+$conda\
 [](bg:#B711BB fg:#00B7EB)\
 $directory\
 [](fg:#B711BB bg:#1C3A5E)\
 $git_branch\
 $git_status\
 $git_metrics\
-[](fg:#1C3A5E)\
-$character\
-$fill\
+[ ](fg:#1C3A5E bg:#B711BB)\
 $cmd_duration\
+[ ](fg:#B711BB)\
+$character\
 """
+
+[conda]
+style = "fg:#551A8B bg:#00B7E7"
+format = '[\($environment\)]($style)'
 
 [directory]
 format = "[  $path ]($style)"
@@ -41,8 +45,8 @@ symbol = " "
 symbol = " "
 
 [cmd_duration]
-format = "[](fg:#B711BB)[  $duration]($style)[ ](fg:#B711BB)"
-style = "bg:#B711BB fg:#ffffff"
+format = "[ $duration]($style)"
+style = "bg:#B711BB fg:#E4E4E4"
 
 [character]
 success_symbol = '[](fg:#00FF00)'
