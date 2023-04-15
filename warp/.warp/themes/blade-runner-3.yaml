@@ -1,8 +1,10 @@
 
 background_image:
   path: 'blade-runner-3.jpg'
-  opacity: 30
-accent: '#123e7c'
+  opacity: 10
+accent:
+  left: '#00ffff'
+  right: '#123e7c'
 background: '#000b1e'
 details: darker
 foreground: '#0abdc6'

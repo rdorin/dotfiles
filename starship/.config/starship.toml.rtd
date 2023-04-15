@@ -12,7 +12,7 @@ $line_break\
 """
 
 [os]
-symbols.Macos = " "
+symbols.Macos = ""
 disabled = false
 
 [nodejs]

@@ -1,41 +1,40 @@
 format = """\
-[](fg:#F4F1E9)\
-[ ](fg:#2B463C bg:#F4F1E9)\
+[](fg:#584053)\
+[ ](fg:#FCBC66 bg:#584053)\
 $conda\
-[ ](fg:#F4F1E9 bg:#B1D182)\
+[ ](bg:#8DC6BF fg:#584053)\
 $directory\
-[ ](fg:#B1D182 bg:#688F4E)\
+[ ](fg:#8DC6BF bg:#FCBC66)\
 $git_branch\
 $git_status\
 $git_metrics\
-[ ](fg:#688F4E bg:#2B463C)\
-$python\
+[ ](fg:#FCBC66 bg:#F97B4F)\
 $cmd_duration\
-[ ](fg:#2B463C)\
+[ ](fg:#F97B4F)\
 $character\
 """
 
 [conda]
-style = "fg:#688F4E bg:#F4F1E9"
+style = "fg:#FCBC66 bg:#584053"
 format = '[\($environment\)]($style)'
 
 [directory]
 format = "[  $path ]($style)"
-style = "fg:#2B463C bg:#B1D182"
+style = "fg:#584053 bg:#8DC6BF"
 
 [git_branch]
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
 symbol = " "
-style = "fg:#2B463C bg:#688F4E"
+style = "fg:#2D4057 bg:#FCBC66"
 
 [git_status]
 format = '[\[$all_status\]]($style)'
-style = "fg:#F3DECA bg:#688F4E"
+style = "fg:#C14364 bg:#FCBC66"
 
 [git_metrics]
 format="([ +$added ]($added_style))([-$deleted ]($deleted_style))"
-added_style = "fg:#B1D182 bg:#688F4E"
-deleted_style = "fg:#B1D182 bg:#688F4E"
+added_style = "fg:#2B463C bg:#FCBC66"
+deleted_style = "fg:#C14364 bg:#FCBC66"
 disabled = false
 
 [hg_branch]
@@ -45,17 +44,19 @@ symbol = " "
 [fill]
 symbol = " "
 
-[python]
-style = "fg:#B1D182 bg:#2B463C"
-format = "[ 󱔎 $version]($style)"
-
 [cmd_duration]
 format = "[  $duration]($style)"
-style = "fg:#B1D182 bg:#2B463C"
+style = "fg:#584053 bg:#F97B4F"
 
 [character]
-success_symbol = '[](fg:#B1D182)'
-error_symbol = '[](fg:#F1485B)'
+success_symbol = '[](fg:#00FF00)'
+error_symbol = '[](fg:#E84D44)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)'
 
 [username]
 style_user = "bg:#00B7EB fg:00B7EB"

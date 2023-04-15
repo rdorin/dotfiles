@@ -1,36 +1,40 @@
 format = """\
-[](fg:#00B7EB)\
-[ ](bg:#00B7EB fg:#551A8B)\
-$username\
-[](bg:#B711BB fg:#00B7EB)\
+[](fg:#F3DECA)\
+[ ](fg:#2D4057 bg:#F3DECA)\
+$conda\
+[ ](bg:#2D4057 fg:#F3DECA)\
 $directory\
-[](fg:#B711BB bg:#1C3A5E)\
+[ ](fg:#2D4057 bg:#4097AA)\
 $git_branch\
 $git_status\
 $git_metrics\
-[](fg:#1C3A5E)\
-$character\
-$fill\
+[ ](fg:#4097AA bg:#FA9483)\
 $cmd_duration\
+[ ](fg:#FA9483)\
+$character\
 """
+
+[conda]
+style = "fg:#FF7B89 bg:#F3DECA"
+format = '[\($environment\)]($style)'
 
 [directory]
 format = "[  $path ]($style)"
-style = "fg:#E4E4E4 bg:#B711BB"
+style = "fg:#F3DECA bg:#2D4057"
 
 [git_branch]
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
 symbol = " "
-style = "fg:#00B7EB bg:#1C3A5E"
+style = "fg:#2D4057 bg:#4097AA"
 
 [git_status]
 format = '[\[$all_status\]]($style)'
-style = "fg:#FCF392 bg:#1C3A5E"
+style = "fg:#F3DECA bg:#4097AA"
 
 [git_metrics]
 format="([ +$added ]($added_style))([-$deleted ]($deleted_style))"
-added_style = "bg:#1C3A5E fg:#00FF00"
-deleted_style = "fg:bright-red bg:#1C3A5E"
+added_style = "fg:#2B463C bg:#4097AA"
+deleted_style = "fg:#C14364 bg:#4097AA"
 disabled = false
 
 [hg_branch]
@@ -41,8 +45,8 @@ symbol = " "
 symbol = " "
 
 [cmd_duration]
-format = "[](fg:#B711BB)[  $duration]($style)[ ](fg:#B711BB)"
-style = "bg:#B711BB fg:#ffffff"
+format = "[ $duration]($style)"
+style = "fg:#2D4057 bg:#FA9483"
 
 [character]
 success_symbol = '[](fg:#00FF00)'
