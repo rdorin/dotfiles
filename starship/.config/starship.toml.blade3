@@ -12,6 +12,7 @@ $git_metrics\
 $character\
 $fill\
 $cmd_duration\
+[󱞪](fg:#fffffff)\
 """
 
 [directory]
@@ -28,7 +29,7 @@ format = '[\[$all_status\]]($style)'
 style = "fg:#FCF392 bg:#1C3A5E"
 
 [git_metrics]
-format = "([ +$added ]($added_style))[-$deleted]($deleted_style)"
+format = "([ +$added ]($added_style))[]($added_style)"
 added_style = "bg:#1C3A5E fg:#FCF392"
 deleted_style = "fg:bright-red bg:235"
 disabled = false
