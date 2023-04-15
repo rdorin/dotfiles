@@ -12,7 +12,6 @@ $git_metrics\
 $character\
 $fill\
 $cmd_duration\
-[󱞪](fg:#fffffff)\
 """
 
 [directory]
@@ -29,9 +28,9 @@ format = '[\[$all_status\]]($style)'
 style = "fg:#FCF392 bg:#1C3A5E"
 
 [git_metrics]
-format = "([ +$added ]($added_style))[]($added_style)"
-added_style = "bg:#1C3A5E fg:#FCF392"
-deleted_style = "fg:bright-red bg:235"
+format="([ +$added ]($added_style))([-$deleted ]($deleted_style))"
+added_style = "bg:#1C3A5E fg:#00FF00"
+deleted_style = "fg:bright-red bg:#1C3A5E"
 disabled = false
 
 [hg_branch]
@@ -42,12 +41,12 @@ symbol = " "
 symbol = " "
 
 [cmd_duration]
-format = "[ $duration ]($style)"
-style = "fg:#B711BB"
+format = "[](fg:#B711BB)[  $duration]($style)[ ](fg:#B711BB)"
+style = "bg:#B711BB fg:#ffffff"
 
 [character]
-success_symbol = '[ 󰸞](#00FF00) '
-error_symbol = '[ ✗](#E84D44) '
+success_symbol = '[](fg:#00FF00)'
+error_symbol = '[](fg:#E84D44)'
 
 [time]
 disabled = false
