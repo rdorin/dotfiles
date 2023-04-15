@@ -165,4 +165,8 @@ done
 # If a ~/.localrc zshrc exists, source it
 [[ -a ~/.localrc ]] && source ~/.localrc
 
+# add starship for prompt
 eval "$(starship init zsh)"
+
+# neofetch apple splash screen
+neofetch

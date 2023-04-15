@@ -13,6 +13,8 @@ PROGRAMS=(
   zoxide
   exa
   fzf
+  neofetch
+  miniforge
 )
 
 # Loop through the list of programs and prompt the user for confirmation before installing each one
