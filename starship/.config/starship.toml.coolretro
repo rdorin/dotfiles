@@ -50,7 +50,7 @@ style = "fg:#2D4057 bg:#FA9483"
 
 [character]
 success_symbol = '[](fg:#00FF00)'
-error_symbol = '[](fg:#E84D44)'
+error_symbol = '[](fg:#E84D44)'
 
 [time]
 disabled = false

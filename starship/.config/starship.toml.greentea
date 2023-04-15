@@ -55,7 +55,7 @@ style = "fg:#B1D182 bg:#2B463C"
 
 [character]
 success_symbol = '[](fg:#B1D182)'
-error_symbol = '[](fg:#F1485B)'
+error_symbol = '[](fg:#F1485B)'
 
 [username]
 style_user = "bg:#00B7EB fg:00B7EB"
