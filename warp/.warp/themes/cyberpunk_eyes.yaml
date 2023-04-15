@@ -4,8 +4,8 @@ background: '#101421'
 details: darker
 foreground: '#fffbf6'
 background_image:
-  path: 'dune.jpg'
-  opacity: 30
+  path: 'cyberpunk_eyes.png'
+  opacity: 50
 terminal_colors:
   bright:
     black: '#565656'

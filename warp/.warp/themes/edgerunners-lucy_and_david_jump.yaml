@@ -6,6 +6,9 @@ accent: "#ffdb00"
 background: "#000000"
 details: darker
 foreground: "#ffffff"
+background_image:
+  path: "cyberpunk_moon.jpg"
+  opacity: 2
 terminal_colors:
   bright:
     black: "#1d1d1d"

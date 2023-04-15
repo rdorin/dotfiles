@@ -1,11 +1,11 @@
 
 background_image:
-  path: 'dune-center.jpg'
-  opacity: 30
-accent: '#550068'
-background: '#1e0528'
+  path: 'cyberpunk_lucy.jpg'
+  opacity: 0
+accent: '#8DC6BF'
+background: '#000000'
 details: darker
-foreground: '#ffeeff'
+foreground: '#FB98B8'
 terminal_colors:
   bright:
     black: '#320f55'
