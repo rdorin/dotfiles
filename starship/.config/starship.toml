@@ -29,7 +29,7 @@ symbol = " "
 style = "fg:#572F5E bg:#FB98B8"
 
 [git_status]
-format = '[\[$all_status\]]($style)'
+format = '[<$all_status>]($style)'
 style = "fg:#F7F0E0 bg:#FB98B8"
 
 [git_metrics]
