@@ -1,3 +1,9 @@
+########################################################
+# NOTE: 
+# All private or machine-specific environment settings should be stored
+#   in .zshrc.local!
+########################################################
+
 export ZSH=$DOTFILES/zsh
 
 # add all functions
