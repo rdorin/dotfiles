@@ -3,3 +3,5 @@ scripts/.local/bin/rust-analyzer
 scripts/.local/bin
 getnf/
 lazygit/.config/lazygit
+.DS_Store
+zsh/.config/zsh/.zsh_history
