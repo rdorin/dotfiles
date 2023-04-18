@@ -3,7 +3,7 @@ background: "#000000"
 details: darker
 foreground: "#ffffff"
 background_image:
-  path: 'bebop_1.jpg'
+  path: 'bebop_1.png'
   opacity: 2
 terminal_colors:
   bright:
